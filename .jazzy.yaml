@@ -1,0 +1,7 @@
+# WUEnvironment document generator jazzy settings
+
+copyright: Copyright 2019 Wunder Mobility
+author: Vicente Crespo
+xcodebuild_arguments: [-target, WUEnvironment-iOS]
+clean: true
+output: ./Documentation
