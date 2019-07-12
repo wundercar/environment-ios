@@ -23,12 +23,13 @@
 # WUEnvironment
 
 <p align="center">
-ℹ️ Short description of WUEnvironment
+ℹ️ WUEnvironment allows to detect the kind of app build in build time [Debug | Adhoc | Release] and also manage API environments.
 </p>
 
 ## Features
 
-- [x] ℹ️ Add WUEnvironment features
+- [x] ℹ️ WUEnvironment detects the app build time in build time
+- [x] ℹ️ WUEnvironment handles API environments
 
 ## Example
 
@@ -41,8 +42,44 @@ The example application is the best way to see `WUEnvironment` in action. Simply
 WUEnvironment is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```bash
+```
+bash
 pod 'WUEnvironment'
+```
+
+And very important, it's needed to add in the project podfile the following:
+
+```
+post_install do |installer|
+
+    target = installer.pods_project.targets.find{|t| t.to_s == "WUEnvironment"}
+    target.build_configurations.each do |config|
+        puts "Setting Swift flags for configuration #{config.name}".green
+
+        s = config.build_settings['OTHER_SWIFT_FLAGS']
+
+        if s == nil
+            s = [ '$(inherited)' ]
+        end
+
+        if config.name == 'Debug'
+            s.push('-DCONFIGURATION_Debug')
+        end
+
+        if config.name == 'Demo'
+            s.push('-DCONFIGURATION_Adhoc')
+        end
+
+        if config.name == 'Release'
+            s.push('-DCONFIGURATION_Release')
+        end
+
+        config.build_settings['OTHER_SWIFT_FLAGS'] = s
+        puts "Set flags: #{s}".yellow
+
+    end
+
+end
 ```
 
 ### Carthage

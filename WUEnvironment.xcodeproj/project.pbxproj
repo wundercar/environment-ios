@@ -16,6 +16,11 @@
 		3D9C432E2274629C000A6585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9C432C2274629C000A6585 /* LaunchScreen.storyboard */; };
 		3D9C433422746323000A6585 /* WUEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9C429022745894000A6585 /* WUEnvironment.framework */; };
 		3D9C433522746323000A6585 /* WUEnvironment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9C429022745894000A6585 /* WUEnvironment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF699C1022D766360089C91D /* WUEnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF699C0F22D766360089C91D /* WUEnvironmentManager.swift */; };
+		CF699C1222D768B30089C91D /* WUEnvironmentManager+Flgas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF699C1122D768B30089C91D /* WUEnvironmentManager+Flgas.swift */; };
+		CF699C1422D76B2F0089C91D /* WUEnvironmentManager+NoFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF699C1322D76B2F0089C91D /* WUEnvironmentManager+NoFlags.swift */; };
+		CF699C1722D86E850089C91D /* WUManagerEnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF699C1522D86E260089C91D /* WUManagerEnvironmentTests.swift */; };
+		CF699C1922D875630089C91D /* WUEnvironment+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF699C1822D875630089C91D /* WUEnvironment+Coding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		3D9C432A2274629C000A6585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9C432D2274629C000A6585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D9C432F2274629C000A6585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF699C0F22D766360089C91D /* WUEnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUEnvironmentManager.swift; sourceTree = "<group>"; };
+		CF699C1122D768B30089C91D /* WUEnvironmentManager+Flgas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WUEnvironmentManager+Flgas.swift"; sourceTree = "<group>"; };
+		CF699C1322D76B2F0089C91D /* WUEnvironmentManager+NoFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WUEnvironmentManager+NoFlags.swift"; sourceTree = "<group>"; };
+		CF699C1522D86E260089C91D /* WUManagerEnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUManagerEnvironmentTests.swift; sourceTree = "<group>"; };
+		CF699C1822D875630089C91D /* WUEnvironment+Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WUEnvironment+Coding.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				3D9C42A122745900000A6585 /* WUEnvironment.swift */,
+				CF699C1822D875630089C91D /* WUEnvironment+Coding.swift */,
+				CF699C0F22D766360089C91D /* WUEnvironmentManager.swift */,
+				CF699C1122D768B30089C91D /* WUEnvironmentManager+Flgas.swift */,
+				CF699C1322D76B2F0089C91D /* WUEnvironmentManager+NoFlags.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -159,6 +173,7 @@
 			children = (
 				3D9C42EC22745FDA000A6585 /* LinuxMain.swift */,
 				3D9C42D722745CDE000A6585 /* WUEnvironmentTests.swift */,
+				CF699C1522D86E260089C91D /* WUManagerEnvironmentTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -385,6 +400,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D9C42A222745900000A6585 /* WUEnvironment.swift in Sources */,
+				CF699C1222D768B30089C91D /* WUEnvironmentManager+Flgas.swift in Sources */,
+				CF699C1422D76B2F0089C91D /* WUEnvironmentManager+NoFlags.swift in Sources */,
+				CF699C1922D875630089C91D /* WUEnvironment+Coding.swift in Sources */,
+				CF699C1022D766360089C91D /* WUEnvironmentManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D9C42FC22746078000A6585 /* WUEnvironmentTests.swift in Sources */,
+				CF699C1722D86E850089C91D /* WUManagerEnvironmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
