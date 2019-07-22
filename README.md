@@ -47,12 +47,14 @@ bash
 pod 'WUEnvironment'
 ```
 
-And very important, it's needed to add in the project podfile the following:
+And very important, it's needed to add in the project podfile the following to define 
+Swift flags. 
+This is not done on the pod itself because naming can change from project to project:
 
 ```
 post_install do |installer|
 
-    target = installer.pods_project.targets.find{|t| t.to_s == "WUEnvironment"}
+target = installer.pods_project.targets.find{|t| t.to_s == "{MAIN TARGET}"}
     target.build_configurations.each do |config|
         puts "Setting Swift flags for configuration #{config.name}".green
 
@@ -66,7 +68,7 @@ post_install do |installer|
             s.push('-DCONFIGURATION_Debug')
         end
 
-        if config.name == 'Demo'
+        if config.name == 'Adhoc'
             s.push('-DCONFIGURATION_Adhoc')
         end
 
