@@ -4,6 +4,7 @@ public enum WUEnvironment {
     case development
     case staging
     case production
+    case demo
     case custom(url: String)
 }
 
@@ -14,10 +15,16 @@ public extension WUEnvironment {
         switch self {
         case .development:
             return "Development"
+            
         case .staging:
             return "Staging"
+            
         case .production:
             return "Production"
+            
+        case .demo:
+            return "Demo"
+            
         case .custom(let url):
             return "Custom: \(url)"
         }
@@ -36,6 +43,9 @@ extension WUEnvironment: Equatable {
             return true
             
         case (.production, .production):
+            return true
+            
+        case (.demo, .demo):
             return true
             
         case (.custom(let url1), .custom(let url2)):

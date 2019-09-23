@@ -13,6 +13,7 @@ public extension WUManagerEnvironment {
         return [
             WUEnvironment.development,
             WUEnvironment.staging,
+            WUEnvironment.demo,
             WUEnvironment.production
         ]
     }
