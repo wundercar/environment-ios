@@ -28,6 +28,9 @@ public extension WUManagerEnvironment {
         #elseif CONFIGURATION_Release
             return .production
             
+        #elseif CONFIGURATION_Demo
+            return .demo
+            
         #else
             return .production
         #endif
@@ -39,6 +42,10 @@ public extension WUManagerEnvironment {
     
     static var isStaging: Bool {
         return currentEnvironment == .staging
+    }
+    
+    static var isDemo: Bool {
+        return currentEnvironment == .demo
     }
     
     static var isProduction: Bool {
